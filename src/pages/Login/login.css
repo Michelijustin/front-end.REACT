@@ -1,0 +1,65 @@
+.main{
+    background-image: linear-gradient(90deg,#304673,white);
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente #304673*/
+    align-items: center;   
+    padding: 20px;
+}
+
+.login{
+    border: 2px solid #304673;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.555);
+    border-radius: 10px;
+    padding: 20px;
+    width: 420px;
+    background-color: white;
+}
+
+.login h1{
+    margin-top: 20px;
+    font-weight: bold !important;
+}
+
+.form-floating{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.esqueceu_lembrar{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 10px 0px;
+}
+
+.esqueceu{
+    color: black;
+    text-decoration: none;
+}
+
+.entrar{
+    margin-bottom: 10px;
+    background-color: #304673;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.entrar:hover{
+    background-color: #3f5887fd;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: center;
+}
+
+.cadastrar{
+    color: black;
+    text-decoration: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.616);
+    margin-top: 10px;
+    padding-top: 10px;
+}

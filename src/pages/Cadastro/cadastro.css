@@ -1,0 +1,10 @@
+/*.cor_fundo_cadastro {
+  min-height: 100vh;
+  background-image: linear-gradient(90deg, #304673, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+.html_cadastro, .body_cadastro{
+  background: linear-gradient(90deg, #304673, white);
+}

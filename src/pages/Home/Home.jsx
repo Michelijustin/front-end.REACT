@@ -1,12 +1,12 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import './home.css'
-import trabalho from "../assets/img/img-p.png"
-import equipe from "../assets/img/equipe.png"
-import empatia from "../assets/img/empatia.png"
-import conquista from "../assets/img/conquista (1).png"
-import compromisso from "../assets/img/compromisso.png"
-import mulher from "../assets/img/negp.png"
+import trabalho from "../../assets/img/img-p.png"
+import equipe from "../../assets/img/equipe.png"
+import empatia from "../../assets/img/empatia.png"
+import conquista from "../../assets/img/conquista (1).png"
+import compromisso from "../../assets/img/compromisso.png"
+import mulher from "../../assets/img/negp.png"
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container comeco">
             <div className="row align-items-center">
                 <p className="col-md-6">Somos uma plataforma dedicada a conectar jovens imigrantes de 16 a 22 anos a oportunidades de emprego no Brasil.</p>
-                <div class="col-md-6">
+                <div className="col-md-6">
                   <img src={trabalho} alt="" className="img-comeco"></img>
                 </div>
             </div>

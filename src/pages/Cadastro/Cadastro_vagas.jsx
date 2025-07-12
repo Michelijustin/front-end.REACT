@@ -1,10 +1,10 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import './cadastro.css'
 
 export default function Cadastro_vagas() {
   return (
     <>
-      <Header />
+    <html className='html_cadastro'>
+    <body className='body_cadastro'>
       <div className="container d-flex justify-content-center align-items-start min-vh-100 pt-5" style={{marginBottom: '40px'}}>
         <div className="card shadow p-4" style={{ width: '100%', maxWidth: '600px' }}>
           <h2 className="mb-4 text-center">Cadastro de Vagas</h2>
@@ -78,7 +78,8 @@ export default function Cadastro_vagas() {
           </form>
         </div>
       </div>
-      <Footer />
+    </body>
+    </html>
     </>
   );
 }

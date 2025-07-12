@@ -1,26 +1,54 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
+import logo from '../../assets/img/trabalho-gimp.png'
 import { Link } from 'react-router-dom';
 import './empresa.css'
-import recrutadora from "../assets/img/recru.jpg"
-import logo1 from "../assets/img/logo-buiness.avif"
-import logo2 from "../assets/img/logo-company.jpg"
-import logo3 from "../assets/img/logo-food.jpg"
-import logo4 from "../assets/img/tech-logo.png"
-import logo5 from "../assets/img/creative-logo.jpg"
-import logo6 from "../assets/img/logo-initial.jpg"
-import diversidade from "../assets/img/diversidade1.png"
-import resiliencia from "../assets/img/resiliencia.png"
-import apoio from "../assets/img/apoio.png"
-import programas from "../assets/img/programas.png"
-import recrutador1 from "../assets/img/recruta1.jpg"
-import recrutador2 from "../assets/img/pexels-nkhajotia-1486064.jpg"
-import comunidade from "../assets/img/quem-somos.png"
+import recrutadora from "../../assets/img/recru.jpg"
+import logo1 from "../../assets/img/logo-buiness.avif"
+import logo2 from "../../assets/img/logo-company.jpg"
+import logo3 from "../../assets/img/logo-food.jpg"
+import logo4 from "../../assets/img/tech-logo.png"
+import logo5 from "../../assets/img/creative-logo.jpg"
+import logo6 from "../../assets/img/logo-initial.jpg"
+import diversidade from "../../assets/img/diversidade1.png"
+import resiliencia from "../../assets/img/resiliencia.png"
+import apoio from "../../assets/img/apoio.png"
+import programas from "../../assets/img/programas.png"
+import recrutador1 from "../../assets/img/recruta1.jpg"
+import recrutador2 from "../../assets/img/pexels-nkhajotia-1486064.jpg"
+import comunidade from "../../assets/img/quem-somos.png"
 
 export default function Empresa() {
   return (
     <>
-        <Header />
+       
+        <header>
+             <nav className="navbar navbar-expand-lg">
+               <div className="container-fluid">
+                 <img src={logo} alt="Logo" width="80" height="70"></img>
+                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span className="navbar-toggler-icon"></span>
+                 </button>
+                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li className="nav-item">
+                       <Link className="nav-link" to="/">Quem somos</Link>
+                     </li>
+                     <li className="nav-item">
+                       <Link className="nav-link" to="/vagas">Vagas</Link>
+                     </li>
+                     <li className="nav-item">
+                       <Link className="nav-link" to="/empresa">Empresa</Link>
+                     </li>
+                   </ul>
+                   <form className="d-flex" role="search">
+                    <Link to="/login_empresa" className="btn btn-dark">Entrar</Link>
+                    <Link to="/cadastro" className="btn btn-dark ms-2">Cadastre sua empresa</Link>
+                   </form>
+                 </div>
+               </div>
+             </nav>
+           </header>
+
         <main>
             <div className="cor">
                 <div className="container comeco">
