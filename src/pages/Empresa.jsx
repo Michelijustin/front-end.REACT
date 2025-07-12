@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './empresa.css'
+import { Link } from 'react-router-dom';
 import recrutadora from "../assets/img/recru.jpg"
 import logo1 from "../assets/img/logo-buiness.avif"
 import logo2 from "../assets/img/logo-company.jpg"
@@ -27,7 +28,7 @@ export default function Empresa() {
                         <div className="col-md-6">
                             <h1>Seja parte da mudança!</h1>
                             <p> Ao contratar jovens imigrantes, sua empresa não apenas ganha profissionais dedicados e motivados, mas também contribui para uma sociedade mais inclusiva e diversa.</p>
-                            <input type="submit" value="Anuncie uma vaga!"></input>
+                            <Link to="/cadastro_vagas" className="link-primary">Cadastrar</Link>
                         </div>
                         <div className="col-md-6"><img src={recrutadora} alt=""></img></div>
                     </div>
