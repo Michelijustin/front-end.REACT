@@ -4,6 +4,30 @@ p{
     font-weight: 300;
 }
 
+.botao_vagas:hover{
+    background-color: #c08766;
+    color: black;
+    transition: 0.5s;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.345);
+    transform: translate(2px,-2px);
+}
+
+.botao_vagas:active{
+    background-color: #BFA08E;
+    transition: 0.1s;
+}
+
+.botao_vagas{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: inline-block;
+    color: black ;
+    background-color: #BFA08E;
+}
+
 .cor{
     padding-top: 30px;
     padding-bottom: 30px;
@@ -21,28 +45,6 @@ p{
 .comeco h1{
    color: rgba(0, 0, 0, 0.774);
     margin-bottom: 20px;
-}
-
-.comeco input{
-   background-color: #BFA08E;
-    border: none;
-    padding: 10px;
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-
-.comeco input:hover{
-    background-color: #c08766;
-    transform: translate(3px,-3px);
-    transition: 0.5s;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.345);
-}
-
-.comeco input:active{
-    background-color: #BFA08E;
-    transition: 0.1s;
 }
 
 .comeco img{
@@ -163,28 +165,6 @@ p{
     border-radius: 5px 5px 0 0;
     box-shadow: 3px 8px 15px black;
 }
-
-.frase-final input{
-    background-color: #BFA08E;
-    border: none;
-    padding: 10px;
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    margin-bottom: 50px;
- }
- 
- .frase-final input:hover{
-    background-color: #c08766;
-    transform: translate(3px,-3px);
-    transition: 0.5s;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.345);
- }
-
- .frase-final input:active{
-    background-color: #BFA08E;
-    transition: 0.1s;
- }
 
  @media(max-width:1041px){
     .comeco img{
