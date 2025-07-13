@@ -6,6 +6,7 @@ import Empresa from './pages/Empresa';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 import Cadastro_vagas from './pages/Cadastro_vagas';
+import EmpresaVagas from './pages/EmpresaVagas';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/cadastro_vagas" element={<Cadastro_vagas/>} />
+        <Route path="/empresa/vagas" element={<EmpresaVagas />} />
       </Routes>
     </BrowserRouter>
   );
