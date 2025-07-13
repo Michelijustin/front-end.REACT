@@ -6,7 +6,7 @@ import Empresa from './pages/Empresa/Empresa';
 import Login from './pages/Login/Login';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Cadastro_vagas from './pages/Cadastro/Cadastro_vagas';
-import Login_empresa from './pages/Login/login_empresa';
+import Login_empresa from './pages/Login/Login_empresa'
 
 
 export default function App() {
