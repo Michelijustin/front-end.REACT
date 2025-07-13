@@ -1,9 +1,18 @@
-
 body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+}
+
+.btn.btn-custom-azul {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+.btn.btn-custom-azul:hover {
+  background-color: #0056b3;
 }
 
 .navbar{
@@ -12,12 +21,14 @@ body {
 
 .vagas {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 20px;
 }
 
-h1 {
-    color: #333;
+.container.vagas h1 {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.774);
+    text-align: center;
 }
 
 .vaga {
@@ -49,4 +60,24 @@ h1 {
 
 .vaga a:hover {
     background-color: #005bb5;
+}
+
+.col{
+    margin-bottom: 20px;
+}
+
+.custom-card {
+  width: 18rem;
+  margin: auto; 
+  max-width: 350px;
+}
+
+@media (max-width:767px){
+    img{
+        max-width: 250px;
+        margin: auto;
+    }
+    .custom-card p{
+        font-size: 20px;
+    }
 }

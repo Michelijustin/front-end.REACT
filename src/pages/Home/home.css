@@ -10,17 +10,13 @@ p{
 }
 
 .quem-somos h1{
-    font-size: 30px;
+    font-size: 35px;
     color: rgba(0, 0, 0, 0.774);
 }
 
 .quem-somos{
     margin-top: 20px;
     margin-bottom: 0px;
-}
-
-.quem-somos h1{
-    font-size: 40px;
 }
 
 .comeco p{
