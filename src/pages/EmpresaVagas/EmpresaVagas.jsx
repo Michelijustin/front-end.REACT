@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import VagaCard from "../components/VagaCard";
+import './EmpresaVagas.css';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import VagaCard from "../../components/VagaCard";
 
 const EmpresaVagas = () => {
   const [vagas, setVagas] = useState([]);
