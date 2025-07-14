@@ -1,12 +1,42 @@
-# React + Vite
+# 🌐 ConectaTrabajo – Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface desenvolvida em **React + Vite** para a plataforma ConectaTrabajo, que conecta jovens imigrantes entre 16 e 22 anos a empresas comprometidas com diversidade e inclusão social.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Versão Submetida: Intermediária
 
-## Expanding the ESLint configuration
+Esta versão contempla:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📝 Cadastro de usuários e empresas
+- 💼 Publicação e visualização de vagas
+- 📄 Estrutura de páginas conectadas com a API
+
+> A versão intermediária foi escolhida para submissão por reunir as principais funcionalidades da plataforma e refletir seu propósito social.
+
+---
+
+## 🚀 Projeto no Ar
+
+📎 **Front-End (Vercel):**  
+[https://conectatrabajo-frontend.vercel.app/](https://conectatrabajo-frontend.vercel.app/)
+
+🔗 **API (Spring Boot – Repositório separado):**  
+[https://github.com/Projeto-ConectaTrabajos/conectaTrabajo-backend](https://github.com/Projeto-ConectaTrabajos/conectaTrabajo-backend)
+
+---
+
+## 🧪 Como Executar Localmente
+
+> Requisitos: Node.js 18+
+
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/Projeto-ConectaTrabajos/front-end.REACT.git
+cd front-end.REACT
+
+# 2. Instalar dependências
+npm install
+
+# 3. Rodar em modo desenvolvimento
+npm run dev
