@@ -1,0 +1,21 @@
+.empresa-vagas-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.vagas-list .list-group-item {
+  transition: all 0.3s ease;
+}
+
+.vagas-list .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.form-label {
+  font-weight: 500;
+}
