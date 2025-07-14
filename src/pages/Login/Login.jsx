@@ -1,11 +1,13 @@
 import login from "../../assets/img/login7.png"
 import { Link } from 'react-router-dom';
 import './login.css'
-
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Login() {
   return (
     <>
+    <Header />
     <main className="main">
       <div className="login">
         <form className="col col-md-12">
@@ -33,6 +35,7 @@ export default function Login() {
         </form>
       </div>
     </main>
+    <Footer />
     </>
   );
 }
