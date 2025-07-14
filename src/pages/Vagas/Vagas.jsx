@@ -22,7 +22,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo1} className="card-img-top" alt="Business Empresa" />
+              <img src={logo1} className="card-img-top img" alt="Business Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Assistente Adm – Business</h5>
                 <p className="card-text">
@@ -43,7 +43,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo2} className="card-img-top" alt="Nature Food Empresa" />
+              <img src={logo2} className="card-img-top img" alt="Nature Food Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Aux. de Produção – Nature Food</h5>
                 <p className="card-text">
@@ -64,7 +64,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo3} className="card-img-top" alt="company empresa" />
+              <img src={logo3} className="card-img-top img" alt="company empresa" />
               <div className="card-body">
                 <h5 className="card-title">Jovem Aprendiz – Company</h5>
                 <p className="card-text">
@@ -85,7 +85,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-            <img src={logo4} className="card-img-top" alt="Tech Logo Empresa" />
+            <img src={logo4} className="card-img-top img" alt="Tech Logo Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Suporte Técnico – Tech Logo</h5>
                 <p className="card-text">
@@ -112,7 +112,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo5} className="card-img-top" alt="Nature Food Empresa" />
+              <img src={logo5} className="card-img-top img" alt="Nature Food Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Designer Gráfico JR – Creative</h5>
                 <p className="card-text">
@@ -133,7 +133,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo6} className="card-img-top" alt="Initial Logo Empresa" />
+              <img src={logo6} className="card-img-top img" alt="Initial Logo Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Recepcionista – Initial Logo</h5>
                 <p className="card-text">
@@ -154,7 +154,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo7} className="card-img-top" alt="Initial Logo Empresa" />
+              <img src={logo7} className="card-img-top img" alt="Initial Logo Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Técnico de T.I. Júnior – Tech Logo</h5>
                 <p className="card-text">
@@ -175,7 +175,7 @@ export default function Vagas() {
         <div className="col">
           <div className="card-group">
             <div className="card custom-card">
-              <img src={logo8} className="card-img-top" alt="Initial Logo Empresa" />
+              <img src={logo8} className="card-img-top img" alt="Initial Logo Empresa" />
               <div className="card-body">
                 <h5 className="card-title">Estágio em Marketing – Creative</h5>
                 <p className="card-text">
