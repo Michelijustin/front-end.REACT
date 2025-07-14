@@ -7,7 +7,7 @@ import Login from './pages/Login/Login';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Cadastro_vagas from './pages/Cadastro/Cadastro_vagas';
 import Login_empresa from './pages/Login/login_empresa';
-import EmpresaVagas from './pages/EmpresaVagas/EmpresaVagas';
+import EmpresaVagas from './pages/EmpresaVagas';
 
 
 export default function App() {
