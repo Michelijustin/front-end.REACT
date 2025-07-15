@@ -1,0 +1,94 @@
+.html_perfil, .body_perfil {
+  background: linear-gradient(90deg, #304673, white);
+  min-height: 100vh;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  border: 2px solid #dee2e6;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #304673;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-edit {
+  background-color: #304673;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-change-password {
+  background-color: transparent;
+  color: #304673;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: 1px solid #304673;
+}
+
+.btn-edit:hover {
+  background-color: #233759;
+}
+
+.btn-change-password:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .profile-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-edit, .btn-change-password {
+    width: 100%;
+  }
+}

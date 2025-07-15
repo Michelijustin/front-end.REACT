@@ -1,5 +1,5 @@
 import React from "react";
-import { parseISO, formatDistanceToNow } from 'date-fns';
+import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 const VagaCard = ({ vaga, onEdit, onDelete, onViewCandidates }) => {
@@ -7,7 +7,20 @@ const VagaCard = ({ vaga, onEdit, onDelete, onViewCandidates }) => {
     if (!dataString) return 'Data não disponível';
     
     try {
-      return formatDistanceToNow(parseISO(dataString), {
+      // 1. Adiciona 'Z' para forçar interpretação como UTC
+      const dataUTC = new Date(dataString.endsWith('Z') ? dataString : dataString + 'Z');
+      
+      // 2. Opcional: converte para fuso local se necessário
+      const dataLocal = new Date(dataUTC);
+      
+      console.log('Debug:', {
+        original: dataString,
+        asUTC: dataUTC,
+        asLocal: dataLocal,
+        offset: dataLocal.getTimezoneOffset()
+      });
+
+      return formatDistanceToNow(dataLocal, {
         locale: ptBR,
         addSuffix: true,
       });

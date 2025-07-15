@@ -25,20 +25,25 @@ const EmpresaVagas = () => {
   });
   const [editingId, setEditingId] = useState(null);
 
-  useEffect(() => {
-    const fetchVagas = async () => {
-      try {
-        const response = await axios.get("http://localhost:8080/vagas");
-        setVagas(response.data);
-      } catch (err) {
-        setError("Erro ao carregar vagas");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchVagas();
-  }, []);
-
+  const fetchVagas = async () => {
+  try {
+    const response = await axios.get("http://localhost:8080/vagas", {
+      timeout: 5000 // 5 segundos de timeout
+    });
+    setVagas(response.data);
+  } catch (err) {
+    if (err.code === "ECONNABORTED") {
+      setError("Tempo de conexão esgotado. O servidor está lento?");
+    } else if (err.code === "ERR_NETWORK") {
+      setError("Não foi possível conectar ao servidor. Verifique se o backend está rodando.");
+    } else {
+      setError("Erro ao carregar vagas: " + err.message);
+    }
+    console.error("Detalhes do erro:", err);
+  } finally {
+    setIsLoading(false);
+  }
+};
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -48,53 +53,62 @@ const EmpresaVagas = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const vagaData = {
-        ...formData,
-        dataPublicacao: new Date().toISOString(),
-      };
-
-      if (editingId) {
-        await axios.put(`http://localhost:8080/vagas/${editingId}`, vagaData);
-        setVagas(
-          vagas.map((v) => (v.idVaga === editingId ? { ...v, ...vagaData } : v))
-        );
-      } else {
-        const response = await axios.post(
-          "http://localhost:8080/vagas",
-          vagaData
-        );
-        setVagas([...vagas, response.data]);
-      }
-
-      setShowForm(false);
-      setEditingId(null);
-      resetForm(); // Use a função de reset aqui também
-    } catch (err) {
-      console.error("Erro:", err.response?.data);
-      setError(err.response?.data?.message || "Erro ao salvar vaga");
+  e.preventDefault();
+  try {
+    // Obtenha o ID da empresa do usuário logado
+    const empresaId = localStorage.getItem("empresaId");
+    
+    if (!empresaId) {
+      throw new Error("Nenhuma empresa associada ao usuário. Faça login novamente.");
     }
-  };
+
+    const vagaData = {
+      ...formData,
+      dataPublicacao: new Date().toISOString(),
+      empresa: { idEmpresa: 1 } // Use um ID que exista no seu banco
+    };
+
+    console.log("Dados sendo enviados:", JSON.stringify(vagaData, null, 2));
+
+    if (editingId) {
+      const response = await axios.put(`http://localhost:8080/vagas/${editingId}`, vagaData);
+      setVagas(vagas.map(v => v.idVaga === editingId ? response.data : v));
+    } else {
+      const response = await axios.post("http://localhost:8080/vagas", vagaData);
+      setVagas([...vagas, response.data]);
+    }
+
+    setShowForm(false);
+    setEditingId(null);
+    resetForm();
+  } catch (err) {
+    console.error("Erro detalhado:", {
+      message: err.message,
+      response: err.response?.data,
+      status: err.response?.status,
+    });
+    
+    setError(err.response?.data?.message || "Erro ao salvar vaga. Verifique o console para detalhes.");
+  }
+};
 
   const handleEdit = (vaga) => {
-    setFormData({
-      titulo: vaga.titulo,
-      localizacao: vaga.localizacao,
-      competencias: vaga.competencias,
-      modalidade: vaga.modalidade,
-      requisitos: vaga.requisitos,
-      beneficios: vaga.beneficios,
-      responsabilidade: vaga.responsabilidade,
-      descricaoEmpresa: vaga.descricaoEmpresa,
-      descricao: vaga.descricao,
-      salario: vaga.salario || 0,
-      areaAtuacao: vaga.areaAtuacao || "", // Adicione esta linha
-      tipoContrato: vaga.tipoContrato || "CLT", // E esta também
-    });
-    setEditingId(vaga.idVaga);
-    setShowForm(true);
-  };
+  if (!vaga) {
+    console.error("Nenhuma vaga fornecida para edição");
+    return;
+  }
+  
+  console.log("Editando vaga:", vaga); // Log para depuração
+  
+  setFormData({
+    ...vaga,
+    salario: vaga.salario || 0,
+    areaAtuacao: vaga.areaAtuacao || "",
+    tipoContrato: vaga.tipoContrato || "CLT"
+  });
+  setEditingId(vaga.idVaga);
+  setShowForm(true);
+};
 
   const resetForm = () => {
     setFormData({
